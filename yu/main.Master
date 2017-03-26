@@ -1,0 +1,225 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="yu.main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Book-Life</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+<%--    bxslider--%>
+        <link rel="stylesheet" href="bxslider/jquery.bxslider.css"/>
+    <style>
+        .slider {
+
+            width: 100%;
+            /*margin: auto;*/
+            margin-top: 20px;
+        }
+        .slider ul {
+            margin: 0;
+            padding: 0;
+
+        }
+        .slider img {
+            width: 100%;
+            height:100%;
+        }
+    </style>
+<%--    bxslider--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <span class="logo"><strong>
+                           <asp:Literal ID="lt_app_name" runat="server" Text="鹿鳴文化"></asp:Literal></strong></span><asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/123.png" Width="400px" />
+                        <ul class="icons">
+                            <li><a href="register.aspx">註冊</a></li>
+                            <li><a href="login.aspx">登入</a></li>
+                        </ul>
+                    </header>
+
+                  <%--  <section id="banner">
+                        <div class="content">
+                            <header>
+                                <h1>Book-Life文品<br />
+                                    買文具 Book-Life讓您安心</h1>
+                                <p>Book Your Life</p>
+                            </header>
+                            <p>Book-Life成立於1995年，是台灣圖書、影音銷售第一大通路，近年更積極跨足成為全方位網購零售平台，以「在購物中思考‧在閱讀中進化」為品牌精神，持續拓展百貨商品品類與服務，以更簡易、更貼心的購物介面及流程、便捷的出貨速度與優質的客服服務，Book-Life文品更獲得經濟部「資料隱私保護標章認證」的安全購物網站，期待提供消費者更安全、便利、無障礙的購物體驗</p>
+                            <ul class="actions">
+                                <li><a href="#" class="button big">Learn More</a></li>
+                            </ul>
+                        </div>
+                        <span class="image object">
+                            <img src="http://library.tamu.edu/assets/images/buildings/wcl.jpg" alt="" />
+                        </span>
+                    </section>--%>
+
+                    <div>
+                        <%--bsslider--%>
+                          <div class="slider">
+        <ul>
+            <li><img src="images/001.jpg" alt=""/></li>
+            <li><img src="images/002.jpg" alt=""/></li>
+            <li><img src="images/003.jpg" alt=""/></li>
+            <li><img src="images/004.jpg" alt=""/></li>
+            <li><img src="images/005.jpg" alt=""/></li>
+            <li><img src="images/006.jpg" alt=""/></li>
+            <li><img src="images/007.jpg" alt=""/></li>
+            <li><img src="images/008.jpg" alt=""/></li>
+            <li><img src="images/009.jpg" alt=""/></li>
+ <%--           <li><img src="images/007.jpg" alt=""/></li>--%>
+        </ul>
+    </div>
+                        <%--bsslider--%>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+
+                    <!-- Search -->
+                    <%--<section id="search" class="alt">
+                        <form method="post" action="#">
+                            <input type="text" name="query" id="query" placeholder="Search" />
+                        </form>
+                    </section>--%>
+
+                    <!-- Menu -->
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>
+                                <asp:Image ID="Image1" runat="server" Height="160px" ImageUrl="~/images/logo.png" Width="280px" /></h2>
+                        </header>
+                        <ul>
+                            <li><a href="index.html">Book-Life</a></li>
+                            <li><a href="generic.html">Generic</a></li>
+                            <li><a href="elements.html">Elements</a></li>
+                            <li><a href="about.aspx">關於Book-Life</a></li>
+                            <li><a href="contact.aspx">聯絡Book-Life</a></li>
+                            <li>
+                                <span class="opener">Submenu</span>
+                                <ul>
+                                    <li><a href="#">Lorem Dolor</a></li>
+                                    <li><a href="#">Ipsum Adipiscing</a></li>
+                                    <li><a href="#">Tempus Magna</a></li>
+                                    <li><a href="#">Feugiat Veroeros</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Etiam Dolore</a></li>
+                            <li><a href="#">Adipiscing</a></li>
+                            <li>
+                                <span class="opener">Another Submenu</span>
+                                <ul>
+                                    <li><a href="#">Lorem Dolor</a></li>
+                                    <li><a href="#">Ipsum Adipiscing</a></li>
+                                    <li><a href="#">Tempus Magna</a></li>
+                                    <li><a href="#">Feugiat Veroeros</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Maximus Erat</a></li>
+                            <li><a href="#">Sapien Mauris</a></li>
+                            <li><a href="#">Amet Lacinia</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Section -->
+                    <section>
+                        <header class="major">
+                            <h2>Ante interdum</h2>
+                        </header>
+                        <div class="mini-posts">
+                            <article>
+                                <a href="#" class="image">
+                                    <img src="images/pic07.jpg" alt="" /></a>
+                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                            </article>
+                            <article>
+                                <a href="#" class="image">
+                                    <img src="images/pic08.jpg" alt="" /></a>
+                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                            </article>
+                            <article>
+                                <a href="#" class="image">
+                                    <img src="images/pic09.jpg" alt="" /></a>
+                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                            </article>
+                        </div>
+                        <ul class="actions">
+                            <li><a href="#" class="button">More</a></li>
+                        </ul>
+                    </section>
+
+                    <!-- Section -->
+                    <section>
+                        <header class="major">
+                            <h2>Get in touch</h2>
+                        </header>
+                        <p>地址：32651 楊梅區秀才路851號
+                            <p>電話：(03)4855368　傳真：(03)4881210 </p>
+                            © 桃竹苗分署網站 Inc. All Rights Reserved</p>
+                        <ul class="contact">
+                            <li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
+                            <li class="fa-phone">(000) 000-0000</li>
+                            <li class="fa-home">1234 Somewhere Road #8254<br />
+                                Nashville, TN 00000-0000</li>
+                        </ul>
+                    </section>
+
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+
+       <%-- bxslider--%>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="bxslider/jquery.bxslider.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".slider ul").bxSlider({
+                    mode: "fade",
+                    speed: 1500,
+                    //               captions:true,
+                    //               pager:false,
+                    //               pagerType:"short",
+                    //               controls:false,
+                    auto: true,
+                                   pause:6000
+                });
+            });
+        </script>
+       <%-- bxslider--%>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="yu.register" %>
+
+<%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            height: 23px;
+        }
+        #yu{
+            margin-left:0px;
+            margin-bottom:40px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="fixed-width">
+        <h2 id="yu">加入宇哥會員:</h2>
+ <table>
+        <tr>
+            <td style="height: 50px; width: 220px; font-size: 20px;">
+                <asp:Label ID="Label1" runat="server" Text="請輸入您的姓名:"></asp:Label></td>
+            <td>
+                <asp:TextBox ID="txt_user_name" runat="server"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td style="height: 50px; font-size: 20px;">
+                <asp:Label ID="Label2" runat="server" Text="請輸入您的E-Mail:"></asp:Label></td>
+            <td>
+                <asp:TextBox ID="txt_user_no" runat="server"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td class="auto-style1" style="height: 50px; font-size: 20px;">
+                <asp:Label ID="Label3" runat="server" Text="請設定您的密碼:"></asp:Label></td>
+            <td class="auto-style1">
+                <asp:TextBox ID="txt_password" runat="server"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td style="height: 50px; font-size: 20px;">
+                <asp:Label ID="Label4" runat="server" Text="請再輸入一次您的密碼:     "></asp:Label></td>
+            <td>
+                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></td>
+        </tr>
+      <tr>
+          <dx:ASPxCaptcha ID="ASPxCaptcha1" runat="server" EnableTheming="True" Theme="Office2010Blue" CharacterSet="efhkmnrstuvxyz23456789">
+          </dx:ASPxCaptcha>
+          
+        </tr>
+    </table>
+        </div>
+    <div class="fixed-width">
+        <asp:Button ID="Button1" runat="server" Text="註冊" BackColor="#99CCFF" OnClick="Button1_Click" />
+
+    </div>
+</asp:Content>

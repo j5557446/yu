@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="yu.main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+            <style>
+      * {
+            font-family: "Roboto";
+            box-sizing: border-box;
+        }
+        
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url(http://www.threepullpa.com/data/uploads/68/519608-grey-and-white-hd-wallpaper.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+     
+        }
+        
+        .full-width {
+            width: 100%;
+        }
+        
+        .fixed-width {
+            width: 1500px;
+            margin: auto;
+        }
+   nav {
+            height: 60px;
+            background-color: #000;
+        }
+        
+        nav .logo {
+            margin-left: 20px;
+            float: left;
+            color: aliceblue;
+            line-height: 60px;
+        }
+        
+        nav .menu {
+            float: left;
+            margin-left: 20px;
+        }
+        nav .menu1 {
+            float: right;
+           
+        }
+        nav .menu ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav .menu li {
+            float: left;
+            list-style: none;
+        }
+        
+        nav .menu a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            line-height: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 14px;
+            transition: all .3s;
+        }
+        
+        nav .menu a:hover {
+            background-color: #555;
+        }
+         .header{
+            background-image: url(http://blog.westelm.com/wp-content/uploads/2016/01/TheflowerDrum_WestElm_web_jacquiturk-47.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 350px;
+        }
+             
+            height: 350px;
+        .h{
+            height:50px;
+        }
+        h1{
+            padding-top: 60px;
+            margin-left: 70px;
+            font-size: 60px;
+        }
+    h2{
+           margin-top: 40px;
+           margin-left: 100px;
+           font-size: 40px;
+        }
+    p{
+            line-height: 50px;
+        }
+    
+     footer {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: #000;
+            position:fixed;
+            bottom:0px;
+            right:0px;    
+            left: 0px;  
+            
+        }
+        footer a {
+            color: #eee;
+            text-decoration: none;
+            margin-left: 30px;
+        }
+        footer .copyrights {
+            color: #eee;
+            float: left;
+        }
+        footer .sns {
+            float: right;
+        }
+
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <nav class="full-width">
+        <div class="fixed-width">
+            <div class="logo"><b>宇哥文具</b></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="http://localhost:53671/about.aspx">關於宇哥</a></li>
+                    <li><a href="http://localhost:53671/contact.aspx">聯絡宇哥</a></li>
+
+                </ul>
+            </div>
+              <div class="menu menu1">
+                <ul>
+                    <li><a href="http://localhost:53671/register.aspx">註冊</a></li>
+                    <li><a href="http://localhost:53671/login.aspx">登入</a></li>               
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="full-width">
+        <div class="fixed-width header">
+            <h1><b>宇哥文具</b></h1>
+            <div class="h"></div>
+            <h2><b>買文具 宇哥是你最好的選擇</b></h2>
+        </div>
+    </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+         <footer class="full-width">
+        <div class="fixed-width">
+            <div class="copyrights">
+               宇哥 DESIGN &copy; 2017
+                地址：32651 楊梅區秀才路851號 
+          電話：(03)4855368　傳真：(03)4881210 
+              © 桃竹苗分署網站 Inc. All Rights Reserved
+            </div>
+            <div class="sns">
+                <a href="#"class="fa fa-facebook fa-lg"></a>
+                    <a href="#"class="fa fa-instagram fa-lg"></a>
+                    <a href="#"class="fa fa-twitter fa-lg"></a>
+                    <a href="#"class="fa fa-github fa-lg"></a>
+      
+
+            </div>
+        </div>
+    </footer>
+
+    </div>
+    </form>
+</body>
+</html>
